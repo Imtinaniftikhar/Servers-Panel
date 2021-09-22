@@ -3,8 +3,9 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
-
-        <div class="card-body">
+        
+        <div class="card-body ">
+            <h1 class="justify-content-center">Servers Panel</h1>
 
             <x-jet-validation-errors class="mb-3 rounded-0" />
 
@@ -56,5 +57,6 @@
                 </div>
             </form>
         </div>
+                
     </x-jet-authentication-card>
 </x-guest-layout>

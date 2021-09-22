@@ -6,7 +6,7 @@
     </x-slot>
     
     
-    <div class="card">
+    <div class="card mt-5">
         <div class="card-header">
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-between">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-body">        
+        <div class="card-body ">        
             
             @if ($message = Session::get('success'))
             <div class="alert alert-success">
@@ -25,7 +25,7 @@
             </div>
             @endif
             
-            <table class="table table-bordered">
+            <table class="table table-bordered table-striped table-hover datatable datatable-User">
                 <tr>
                     <th>Id</th>
                     <th>IP</th>
@@ -35,6 +35,7 @@
                     <th>SSH Code</th>
                     <th>Bandwidth</th>
                     <th>Duration Cost</th>
+                    <th>Platform</th>
                     <th width="250px">Action</th>
                 </tr>
                 @foreach ($projects as $key => $project)
@@ -46,7 +47,9 @@
                     <td>{{ $project ->password}}</td>
                     <td>{{ $project ->ssh_code }}</td>
                     <td>{{ $project ->bandwidth }}</td>
-                    <td>{{ $project ->duration_date}}</td>
+                    <td>{{ $project ->cost}}</td>
+                   
+                    
                     <td>
                         <form action="{{ route('projects.destroy',$project->id) }}" method="POST">
                             
